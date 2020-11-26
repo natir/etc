@@ -1,0 +1,42 @@
+setopt interactivecomments
+
+# load antigen
+source ~/config/zsh/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen apply
+
+# dnf alias
+alias dnf="sudo dnf"
+alias upgrade="dnf upgrade"
+
+# unix cmd alias
+alias ls="exa"
+alias cat="bat"
+alias find="fd"
+alias ll="ls -la"
+alias rm="rm -i"
+alias cp="cp -ip"
+alias mv="mv -i"
+alias systemctl="sudo systemctl"
+
+PATH=$PATH:"/home/pierre/.cargo/bin/":"/home/pierre/.local/bin/":"/home/pierre/.miniconda3/bin":"/home/pierre/bin/"
+
+eval "$(starship init zsh)"
+
+bad_network ()
+{	
+	sudo systemctl stop dnssec-triggerd.service
+}
+
+doi2bib ()
+{
+    curl -H "Accept: application/x-bibtex; charset=utf-8" https://data.crossref.org/${1}
+}
+
+# call doi2bib and write result in clipboard
+doi2clip ()
+{
+    doi2bib ${1} | wl-copy
+}

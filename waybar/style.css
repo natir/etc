@@ -1,0 +1,137 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: Nerd Font Hack;
+	font-size: 10px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+    margin-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 26px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+#workspaces {
+	margin-top: 2px;
+	margin-left: 12px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	background: #282a36;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #f8f8f2;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	color: #9aedfe;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #ff79c6;
+}
+
+#network {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(27, 158, 119);
+}
+
+#pulseaudio {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(217, 95, 2);
+}
+
+#temperature {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(117, 112, 179);
+}
+
+#battery {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(231, 41, 138);
+}
+
+#cpu {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(102, 166, 30);
+}
+
+#memory {
+	margin-top: 2px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #4d4d4d;
+	background: rgb(230, 171, 2);
+}
+
+#clock {
+	margin-top: 2px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 2px;
+	border-radius: 26px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
+}

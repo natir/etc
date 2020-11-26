@@ -1,0 +1,57 @@
+
+{
+	"layer": "top",
+	"modules-left": ["sway/workspaces", "sway/mode"],
+	"modules-center": [],
+	"modules-right": ["network", "pulseaudio", "temperature", "battery", "cpu", "memory", "clock"],
+
+	"network": {
+		"tooltip": false,
+		"format-wifi": " {essid} {ipaddr}",
+		"format-ethernet": " {ipaddr}"
+	},
+
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+         	"format-bluetooth": "{volume}% {icon}",
+                "format-muted": "",
+                "format-icons": {
+                    "headphone": "",
+                    "default": ["", ""]
+                },
+		"on-click": "pavucontrol"
+	},
+
+ 	"temperature": {
+            "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	    "critical-threshold": 80,
+	    "format-critical": "{temperatureC}°C ",
+	    "format": "{temperatureC}°C "
+	},
+	    
+	"battery": {
+            "interval": 60,
+	    "states": {
+                "warning": 30,
+		"critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-icons": ["", "", "", "", ""],
+            "max-length": 25
+	},
+	
+	"cpu": {
+		"tooltip": false,
+		"format": "cpu {}%"
+	},
+
+	"memory": {
+		"tooltip": false,
+		"format": "mem {}%"
+	},
+
+	"clock": {
+		"format": "{:%H:%M %a %d/%m}"
+	}
+}
