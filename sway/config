@@ -37,10 +37,10 @@ output * bg #000000 solid_color
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 600 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+     timeout 600 'swaylock -f -c 000000' \
+     timeout 600 'swaymsg "output * dpms off"' \
+     resume 'swaymsg "output * dpms on"' \
+     before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -51,8 +51,8 @@ exec swayidle -w \
 # Example configuration:
 #
 input * {
-    xkb_layout "fr"
-    xkb_variant "bepo"
+      xkb_layout "fr"
+      xkb_variant "bepo"
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -62,137 +62,137 @@ input * {
 #
 # Basics:
 #
-    # Start A Terminal
-    Bindsym $mod+Return Exec $term
+# Start A Terminal
+bindsym $mod+Return exec $term
 
-    # Kill Focused Window
-    Bindsym $mod+Shift+C Kill
+# Kill Focused Window
+bindsym $mod+Shift+c kill
 
-    # Start Your Launcher
-    Bindsym $mod+Space Exec $menu
+# Start Your Launcher
+bindsym $mod+Space exec $menu
 
-    # Drag Floating Windows By Holding Down $mod And Left Mouse Button.
-    # Resize Them With Right Mouse Button + $mod.
-    # Despite The Name, Also Works For Non-Floating Windows.
-    # Change Normal To Inverse To Use Left Mouse Button For Resizing And Right
-    # Mouse Button For Dragging.
-    Floating_Modifier $mod Normal
+# Drag Floating Windows By Holding Down $mod And Left Mouse Button.
+# Resize Them With Right Mouse Button + $mod.
+# Despite The Name, Also Works For Non-Floating Windows.
+# Change Normal To Inverse To Use Left Mouse Button For Resizing And Right
+# Mouse Button For Dragging.
+Floating_Modifier $mod normal
 
-    # Reload The Configuration File
-    Bindsym $mod+Shift+o Reload
+# Reload The Configuration File
+bindsym $mod+Shift+o reload
 
-    # Exit Sway (Logs You Out Of Your Wayland Session)
-    Bindsym $mod+Shift+E Exec Swaynag -T Warning -M 'You Pressed The Exit Shortcut. Do You Really Want To Exit Sway? This Will End Your Wayland Session.' -B 'Yes, Exit Sway' 'Swaymsg Exit'
+# Exit Sway (Logs You Out Of Your Wayland Session)
+bindsym $mod+Shift+e exec swaynag -T warning -M 'You pressed the exit shortcut. Do you really want to exit sway? This will end your wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving Around:
 #
-    # Move Your Focus Around
-    Bindsym $mod+$left Focus Left
-    Bindsym $mod+$down Focus Down
-    Bindsym $mod+$up Focus Up
-    Bindsym $mod+$right Focus Right
-    # Or Use $mod+[Up|Down|Left|Right]
-    Bindsym $mod+Left Focus Left
-    Bindsym $mod+Down Focus Down
-    Bindsym $mod+Up Focus Up
-    Bindsym $mod+Right Focus Right
+# Move Your Focus Around
+bindsym $mod+$left Focus Left
+bindsym $mod+$down Focus Down
+bindsym $mod+$up Focus Up
+bindsym $mod+$right Focus Right
+# Or Use $mod+[Up|Down|Left|Right]
+bindsym $mod+Left Focus Left
+bindsym $mod+Down Focus Down
+bindsym $mod+Up Focus Up
+bindsym $mod+Right Focus Right
 
-    # Move The Focused Window With The Same, But Add Shift
-    Bindsym $mod+Shift+$left Move Left
-    Bindsym $mod+Shift+$down Move Down
-    Bindsym $mod+Shift+$up Move Up
-    Bindsym $mod+Shift+$right Move Right
-    # Ditto, With Arrow Keys
-    Bindsym $mod+Shift+Left Move Left
-    Bindsym $mod+Shift+Down Move Down
-    Bindsym $mod+Shift+Up Move Up
-    Bindsym $mod+Shift+Right Move Right
+# Move The Focused Window With The Same, But Add Shift
+bindsym $mod+Shift+$left Move Left
+bindsym $mod+Shift+$down Move Down
+bindsym $mod+Shift+$up Move Up
+bindsym $mod+Shift+$right Move Right
+# Ditto, With Arrow Keys
+bindsym $mod+Shift+Left Move Left
+bindsym $mod+Shift+Down Move Down
+bindsym $mod+Shift+Up Move Up
+bindsym $mod+Shift+Right Move Right
 #
 # Workspaces:
 #
-    # Switch To Workspace
-    Bindsym $mod+quotedbl Workspace 1
-    Bindsym $mod+guillemotleft Workspace 2
-    Bindsym $mod+guillemotright Workspace 3
-    Bindsym $mod+parenleft Workspace 4
-    Bindsym $mod+parenright Workspace 5
-    Bindsym $mod+at Workspace 6
-    Bindsym $mod+plus Workspace 7
-    Bindsym $mod+minus Workspace 8
-    Bindsym $mod+slash Workspace 9
-    Bindsym $mod+asterisk Workspace 0
-    # Move Focused Container To Workspace
-    Bindsym $mod+Shift+quotedbl Move Container To Workspace 1
-    Bindsym $mod+Shift+guillemotleft Move Container To Workspace 2
-    Bindsym $mod+Shift+guillemotright Move Container To Workspace 3
-    Bindsym $mod+Shift+parenleft Move Container To Workspace 4
-    Bindsym $mod+Shift+parenright Move Container To Workspace 5
-    Bindsym $mod+Shift+at Move Container To Workspace 6
-    Bindsym $mod+Shift+plus Move Container To Workspace 7
-    Bindsym $mod+Shift+minus Move Container To Workspace 8
-    Bindsym $mod+Shift+slash Move Container To Workspace 9
-    Bindsym $mod+Shift+asterisk Move Container To Workspace 0
-    # Note: Workspaces Can Have Any Name You Want, Not Just Numbers.
-    # We Just Use 1-10 As The Default.
+# Switch To Workspace
+bindsym $mod+quotedbl Workspace 1
+bindsym $mod+guillemotleft Workspace 2
+bindsym $mod+guillemotright Workspace 3
+bindsym $mod+parenleft Workspace 4
+bindsym $mod+parenright Workspace 5
+bindsym $mod+at Workspace 6
+bindsym $mod+plus Workspace 7
+bindsym $mod+minus Workspace 8
+bindsym $mod+slash Workspace 9
+bindsym $mod+asterisk Workspace 0
+# Move Focused Container To Workspace
+bindsym $mod+Shift+quotedbl Move Container To Workspace 1
+bindsym $mod+Shift+guillemotleft Move Container To Workspace 2
+bindsym $mod+Shift+guillemotright Move Container To Workspace 3
+bindsym $mod+Shift+parenleft Move Container To Workspace 4
+bindsym $mod+Shift+parenright Move Container To Workspace 5
+bindsym $mod+Shift+at Move Container To Workspace 6
+bindsym $mod+Shift+plus Move Container To Workspace 7
+bindsym $mod+Shift+minus Move Container To Workspace 8
+bindsym $mod+Shift+slash Move Container To Workspace 9
+bindsym $mod+Shift+asterisk Move Container To Workspace 0
+# Note: Workspaces Can Have Any Name You Want, Not Just Numbers.
+# We Just Use 1-10 As The Default.
 #
 # Layout Stuff:
 #
-    # You Can "Split" The Current Object Of Your Focus With
-    # $mod+B Or $mod+V, For Horizontal And Vertical Splits
-    # Respectively.
-    Bindsym $mod+B Splith
-    Bindsym $mod+V Splitv
+# You Can "Split" The Current Object Of Your Focus With
+# $mod+b Or $mod+v, For Horizontal And Vertical Splits
+# Respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
 
-    # Switch The Current Container Between Different Layout Styles
-    Bindsym $mod+Shift+U Layout Stacking
-    Bindsym $mod+Shift+I Layout Tabbed
-    Bindsym $mod+E Layout Toggle Split
+# Switch The Current Container Between Different Layout Styles
+bindsym $mod+Shift+u layout stacking
+bindsym $mod+Shift+i layout tabbed
+bindsym $mod+e layout toggle split
 
-    # Make The Current Focus Fullscreen
-    Bindsym $mod+F Fullscreen
+# Make The Current Focus Fullscreen
+bindsym $mod+f fullscreen
 
-    # Toggle The Current Focus Between Tiling And Floating Mode
-    Bindsym $mod+Shift+Space Floating Toggle
+# Toggle The Current Focus Between Tiling And Floating Mode
+bindsym $mod+Shift+space floating toggle
 
-    # Swap Focus Between The Tiling Area And The Floating Area
-    Bindsym $mod+Q Focus Mode_Toggle
+# Swap Focus Between The Tiling Area And The Floating Area
+bindsym $mod+q focus mode_toggle
 
-    # Move Focus To The Parent Container
-    Bindsym $mod+A Focus Parent
+# Move Focus To The Parent Container
+bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
-    # Sway Has A "Scratchpad", Which Is A Bag Of Holding For Windows.
-    # You Can Send Windows There And Get Them Back Later.
+# Sway Has A "Scratchpad", Which Is A Bag Of Holding For Windows.
+# You Can Send Windows There And Get Them Back Later.
 
-    # Move The Currently Focused Window to the scratchpad
-    #bindsym $mod+Shift+minus move scratchpad
+# Move The Currently Focused Window to the scratchpad
+#bindsym $mod+Shift+minus move scratchpad
 
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    #bindsym $mod+minus scratchpad show
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+#bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+  # left will shrink the containers width
+  # right will grow the containers width
+  # up will shrink the containers height
+  # down will grow the containers height
+  bindsym $left resize shrink width 10px
+  bindsym $down resize grow height 10px
+  bindsym $up resize shrink height 10px
+  bindsym $right resize grow width 10px
 
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+  # Ditto, with arrow keys
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
 
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  # Return to default mode
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 bindsym $mod+Ctrl+r mode "resize"
 

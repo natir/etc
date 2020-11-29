@@ -1,7 +1,7 @@
 setopt interactivecomments
 
 # load antigen
-source ~/config/zsh/antigen.zsh
+source ~/etc/zsh/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -19,9 +19,10 @@ alias ll="ls -la"
 alias rm="rm -i"
 alias cp="cp -ip"
 alias mv="mv -i"
-alias systemctl="sudo systemctl"
 
 PATH=$PATH:"/home/pierre/.cargo/bin/":"/home/pierre/.local/bin/":"/home/pierre/.miniconda3/bin":"/home/pierre/bin/"
+
+TERM=xterm-256color
 
 eval "$(starship init zsh)"
 
