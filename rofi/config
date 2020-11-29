@@ -1,6 +1,0 @@
-configuration {
- modi: "window,run,ssh,combi";
- theme: "Ark-Dark";
- font: "hack 10";
- combi-modi: "window,run,ssh";
-rofi.theme: /usr/share/rofi/themes/solarized.rasi
