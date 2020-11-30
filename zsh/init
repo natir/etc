@@ -24,6 +24,8 @@ PATH=$PATH:"/home/pierre/.cargo/bin/":"/home/pierre/.local/bin/":"/home/pierre/.
 
 TERM=xterm-256color
 
+SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
+
 eval "$(starship init zsh)"
 
 bad_network ()
