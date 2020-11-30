@@ -217,4 +217,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioNext exec brightnessctl set 5%-
 bindsym XF86AudioPrev exec brightnessctl set +5%
 
+# run notification daemon
+exec mako
+
 include /etc/sway/config.d/*
