@@ -29,6 +29,7 @@
 ;; Lsp mode
 (add-hook 'python-mode-hook #'lsp)
 (add-hook 'rust-mode-hook #'lsp)
+(add-hook 'c++-mode-hook #'lsp)
 
 (require 'company-capf)
 (push 'company-capf company-backends)
