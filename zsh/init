@@ -45,3 +45,8 @@ doi2clip ()
 {
     doi2bib ${1} | wl-copy
 }
+
+doi2altmetric ()
+{
+    curl "https://api.altmetric.com/v1/doi/$1" 2> /dev/null | jq .details_url
+}
