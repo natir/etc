@@ -1,4 +1,3 @@
-
 ;; Package setup
 (require 'package)
 (package-initialize)

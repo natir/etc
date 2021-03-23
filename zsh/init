@@ -28,6 +28,8 @@ PATH=$PATH:"/home/pierre/.cargo/bin/":"/home/pierre/.local/bin/":"/home/pierre/.
 
 TERM=xterm-256color
 
+export PYTHONPATH='/home/pierre/.local/lib/python3.8/site-packages/pdm/pep582':$PYTHONPATH
+
 eval "$(starship init zsh)"
 
 bad_network ()
