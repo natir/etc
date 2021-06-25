@@ -25,6 +25,8 @@ alias rm="rm -i"
 alias cp="cp -ip"
 alias mv="mv -i"
 
+EDITOR="/usr/bin/nvim"
+
 # use user local bin
 PATH=$PATH:"/home/pierre/.local/bin/"
 
@@ -41,6 +43,7 @@ export PYTHONPATH='/home/pierre/.local/lib/python3.8/site-packages/pdm/pep582':$
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 
 TERM=xterm-256color
 eval "$(starship init zsh)"
