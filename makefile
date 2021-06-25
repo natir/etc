@@ -12,9 +12,13 @@ ${HOME}/.config/starship.toml: ${HOME}/etc/starship/config.toml
 	mkdir -p ${HOME}/.config/
 	ln -sf ${HOME}/etc/starship/config.toml ${HOME}/.config/starship.toml
 
-${HOME}/.config/sway/config: ${HOME}/etc/sway/config
+${HOME}/.config/sway/config: ${HOME}/etc/sway/config ${HOME}/.config/sway/local/
 	mkdir -p ${HOME}/.config/sway
 	ln -sf ${HOME}/etc/sway/config ${HOME}/.config/sway/config
+
+${HOME}/.config/sway/local/: ${HOME}/etc/sway/$(shell hostname)/
+	mkdir -p ${HOME}/.config/sway
+	ln -sf ${HOME}/etc/sway/$(shell hostname)/ ${HOME}/.config/sway/local
 
 ${HOME}/.config/waybar: ${HOME}/etc/waybar
 	mkdir -p ${HOME}/.config

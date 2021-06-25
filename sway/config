@@ -23,9 +23,7 @@ set $menu "wofi --show run | xargs swaymsg exec --"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg #000000 solid_color
-
-output eDP-1 scale 1.7
+include "~/.config/sway/local/output"
 
 ### Idle configuration
 #
@@ -214,5 +212,6 @@ bindsym XF86AudioPrev exec brightnessctl set 5%-
 
 # run notification daemon
 exec mako
+include "~/.config/sway/local/run"
 
 include /etc/sway/config.d/*
