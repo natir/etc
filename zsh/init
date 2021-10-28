@@ -7,7 +7,7 @@ antigen use oh-my-zsh
 
 # load key automaticly
 zstyle :plugins:ssh-agent identities id_ed25519
-zstyle :plugins:ssh-agent pass_path pc/curie/ssh_ed25519
+zstyle :plugins:ssh-agent pass_path pc/$(hostname)/ssh_ed25519
 antigen bundle natir/zsh-ssh-agent
 
 antigen apply
