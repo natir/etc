@@ -43,7 +43,6 @@
 (add-hook 'rust-mode-hook #'lsp)
 (add-hook 'c++-mode-hook #'lsp)
 
-(remove-hook 'snakemake-mode-hook #'lsp)
 
 ;; Rust section
 (use-package rustic
@@ -81,7 +80,8 @@
   (lsp-idle-delay 0.3)
   (lsp-rust-analyzer-server-display-inlay-hints t)
   :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  (add-to-list 'lsp-language-id-configuration '(snakemake-mode . "python")))
 
 (use-package lsp-ui
   :ensure

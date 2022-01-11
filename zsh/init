@@ -25,7 +25,7 @@ alias rm="rm -i"
 alias cp="cp -ip"
 alias mv="mv -i"
 
-EDITOR="/usr/bin/nvim"
+EDITOR="/usr/bin/vim"
 
 # use user local bin
 PATH=$PATH:"/home/pierre/.local/bin/"
