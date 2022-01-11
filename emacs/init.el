@@ -29,6 +29,10 @@
 ;; Buffer mode
 (global-set-key (kbd "C-b") 'ibuffer)
 
+;; Global text scale mode
+(require 'default-text-scale)
+(add-hook 'after-init-hook 'default-text-scale-mode)
+
 ;; Snakemake mode
 (add-to-list 'auto-mode-alist '("\\.snk\\'" . snakemake-mode))
 (add-to-list 'auto-mode-alist '("_rule\\'" . snakemake-mode))
@@ -147,7 +151,7 @@
    [default default default italic underline success warning error])
  '(custom-enabled-themes '(wombat))
  '(package-selected-packages
-   '(graphviz-dot-mode flycheck json-mode ess yaml-mode snakemake-mode python projectile use-package lsp-jedi yasnippet python-mode rust-mode company-lsp lsp-mode flymake-python-pyflakes flymake-rust)))
+   '(default-text-scale lsp-ui rustic graphviz-dot-mode flycheck json-mode ess yaml-mode snakemake-mode python projectile use-package lsp-jedi yasnippet python-mode rust-mode company-lsp lsp-mode flymake-python-pyflakes flymake-rust)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
