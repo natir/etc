@@ -33,6 +33,9 @@
 (require 'default-text-scale)
 (add-hook 'after-init-hook 'default-text-scale-mode)
 
+;; Remove trailing whitespace on save
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+
 ;; Snakemake mode
 (add-to-list 'auto-mode-alist '("\\.snk\\'" . snakemake-mode))
 (add-to-list 'auto-mode-alist '("_rule\\'" . snakemake-mode))
