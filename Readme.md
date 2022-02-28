@@ -1,3 +1,6 @@
-# Setup required by wayland usage
+# Setup
 
-Add `DefaultEnvironment="MOZ_ENABLE_WAYLAND=1" "_JAVA_AWT_WM_NONREPARENTING=1"` in /etc/systemd/system.conf and restart.
+Run:
+```
+make
+```
