@@ -1,4 +1,4 @@
-all: ${HOME}/.emacs.d/init.el ${HOME}/.config/wofi/config ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.zshrc
+all: ${HOME}/.emacs.d/init.el ${HOME}/.config/wofi/config ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.zshrc ${HOME}/.config/environment.d/
 
 ${HOME}/.emacs.d/init.el: ${HOME}/etc/emacs/init.el
 	mkdir -p ${HOME}/.emacs.d/
@@ -27,3 +27,5 @@ ${HOME}/.config/waybar: ${HOME}/etc/waybar
 ${HOME}/.zshrc: ${HOME}/etc/zsh/init
 	ln -sf ${HOME}/etc/zsh/init ${HOME}/.zshrc
 
+${HOME}/.config/environment.d/: ${HOME}/etc/environment/$(shell hostname)/
+	ln -sf ${HOME}/etc/environment/$(shell hostname)/ ${HOME}/.config/environment.d
