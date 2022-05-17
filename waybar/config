@@ -1,57 +1,74 @@
-
 {
-	"layer": "top",
-	"modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": [],
-	"modules-right": ["network", "pulseaudio", "temperature", "battery", "cpu", "memory", "clock"],
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["network", "pulseaudio", "temperature", "battery", "cpu", "memory", "idle_inhibitor", "clock"],
 
-	"network": {
-		"tooltip": false,
-		"format-wifi": " {essid} {ipaddr}",
-		"format-ethernet": " {ipaddr}"
-	},
+    "network": {
+	"tooltip": false,
+	"format-wifi": " {essid} {ipaddr}",
+	"format-ethernet": " {ipaddr}"
+    },
 
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-         	"format-bluetooth": "{volume}% {icon}",
-                "format-muted": "",
-                "format-icons": {
-                    "headphone": "",
-                    "default": ["", ""]
-                },
-		"on-click": "pavucontrol"
+    "pulseaudio": {
+	"tooltip": false,
+	"scroll-step": 5,
+	"format-bluetooth": "{volume}% {icon}",
+	"format-muted": "",
+	"format-icons": {
+	    "headphone": "",
+	    "default": ["", ""]
 	},
+	"on-click": "pavucontrol"
+    },
 
- 	"temperature": {
-            "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-	    "critical-threshold": 80,
-	    "format-critical": "{temperatureC}°C ",
-	    "format": "{temperatureC}°C "
-	},
-	    
-	"battery": {
-            "interval": 60,
-	    "states": {
-                "warning": 30,
-		"critical": 15
-            },
-            "format": "{capacity}% {icon}",
-            "format-icons": ["", "", "", "", ""],
-            "max-length": 25
-	},
-	
-	"cpu": {
-		"tooltip": false,
-		"format": "cpu {}%"
-	},
+    "bluetooth": {
+	"format": " {status}",
+	"format-connected": " {device_alias}",
+	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
 
-	"memory": {
-		"tooltip": false,
-		"format": "mem {}%"
-	},
-
-	"clock": {
-		"format": "{:%H:%M %a %d/%m}"
+    "idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+            "activated": "",
+            "deactivated": ""
 	}
+    },
+
+    "temperature": {
+	"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C "
+    },
+
+    "battery": {
+	"interval": 60,
+	"states": {
+	    "warning": 30,
+	    "critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"format-icons": ["", "", "", "", ""],
+	"max-length": 25
+    },
+
+    "cpu": {
+	"tooltip": false,
+	"format": "cpu {}%"
+    },
+
+    "memory": {
+	"tooltip": false,
+	"format": "mem {}%"
+    },
+
+    "clock": {
+	"format": "{:%H:%M %a %d/%m}"
+    }
 }
