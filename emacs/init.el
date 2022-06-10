@@ -110,6 +110,9 @@
 	("<tab>". tab-indent-or-complete)
 	("TAB". tab-indent-or-complete)))
 
+(with-eval-after-load 'lsp-mode
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.snakemake\\'"))
+
 (defun company-yasnippet-or-completion ()
   (interactive)
   (or (do-yas-expand)
