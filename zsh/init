@@ -76,6 +76,7 @@ doi2altmetric ()
     curl "https://api.altmetric.com/v1/doi/$1" 2> /dev/null | jq .details_url
 }
 
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/pierre/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -88,3 +89,4 @@ else
     fi
 fi
 unset __conda_setup
+# <<< conda initialize <<<
