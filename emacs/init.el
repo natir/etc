@@ -11,7 +11,11 @@
 (setq column-number-mode t)
 (show-paren-mode 1)
 
+;; Window move use alt
 (windmove-default-keybindings 'meta)
+
+;; Change font to Liberation
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-12"))
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
