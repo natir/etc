@@ -50,6 +50,9 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
+# GHCup
+[ -f "/home/pierre/.ghcup/env" ] && source "/home/pierre/.ghcup/env" # ghcup-env
+
 # Starship config
 TERM=xterm-256color
 eval "$(starship init zsh)"
