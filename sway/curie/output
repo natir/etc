@@ -1,5 +1,4 @@
 output * bg #000000 solid_color
 
-output HDMI-A-1 pos 0 0 res 1920x1200
+output DP-5 pos 0 0 res 1920x1200
 output eDP-1 pos 1920 0 res 1920x1080
-
