@@ -43,7 +43,11 @@ source "/home/pierre/.cargo/env"
 PATH=$PATH:"/home/pierre/.miniconda3/bin"
 
 # use pep582
-export PYTHONPATH='/home/pierre/.local/lib/python3.8/site-packages/pdm/pep582':$PYTHONPATH
+if [ -n "$PYTHONPATH" ]; then
+    export PYTHONPATH='/home/pierre/.local/pipx/venvs/pdm/lib/python3.11/site-packages/pdm/pep582':$PYTHONPATH
+else
+    export PYTHONPATH='/home/pierre/.local/pipx/venvs/pdm/lib/python3.11/site-packages/pdm/pep582'
+fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
