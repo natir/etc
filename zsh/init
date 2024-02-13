@@ -23,7 +23,7 @@ alias dnf="sudo dnf"
 alias upgrade="dnf upgrade"
 
 # unix cmd alias
-alias ls="exa"
+alias ls="eza"
 alias cat="bat"
 alias find="fd"
 alias ll="ls -la"
