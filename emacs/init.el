@@ -154,6 +154,8 @@
 ;; auto-insert
 (auto-insert-mode)
 (setq auto-insert-directory "~/.emacs.d/templates/")
+(define-auto-insert "main.rs" "main.rs")
+(define-auto-insert "lib.rs" "lib.rs")
 (define-auto-insert "\.rs" "rust.rs")
 
 (custom-set-variables
