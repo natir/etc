@@ -215,4 +215,5 @@ bindsym XF86AudioPrev exec brightnessctl set 5%-
 exec mako
 include "~/.config/sway/local/run"
 
+
 include /etc/sway/config.d/*

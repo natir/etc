@@ -1,0 +1,2 @@
+bindsym Ctrl+space exec /home/pierre/.local/bin/obs-cli -H localhost -p trouline -P 4455 hotkey trigger hotkey_split
+bindsym Ctrl+Shift+space exec /home/pierre/.local/bin/obs-cli -H localhost -p trouline -P 4455 hotkey trigger hotkey_reset
