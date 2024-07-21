@@ -1,4 +1,4 @@
-all: ${HOME}/.config/alacritty ${HOME}/.emacs.d/init.el ${HOME}/.config/environment.d/ ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.config/wofi/config ${HOME}/.zshrc
+all: ${HOME}/.config/alacritty ${HOME}/.emacs.d/ ${HOME}/.config/environment.d/ ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.config/wofi/config ${HOME}/.zshrc
 
 
 ${HOME}/.config/alacritty: ${HOME}/etc/alacritty
@@ -6,9 +6,8 @@ ${HOME}/.config/alacritty: ${HOME}/etc/alacritty
 	ln -sf ${HOME}/etc/alacritty ${HOME}/.config/alacritty
 
 
-${HOME}/.emacs.d/init.el: ${HOME}/etc/emacs/init.el
-	mkdir -p ${HOME}/.emacs.d/
-	ln -sf ${HOME}/etc/emacs/init.el ${HOME}/.emacs.d/init.el
+${HOME}/.emacs.d/: ${HOME}/etc/emacs/init.el
+	ln -sf ${HOME}/etc/emacs/ ${HOME}/.emacs.d
 
 
 ${HOME}/.config/environment.d/: ${HOME}/etc/environment/$(shell hostname)/
