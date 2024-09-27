@@ -39,8 +39,8 @@ PATH=$PATH:"/home/pierre/.local/bin/"
 # use rust bin
 source "/home/pierre/.cargo/env"
 
-# use miniconda bin
-PATH=$PATH:"/home/pierre/.miniconda3/bin"
+# use micromamba bin
+PATH=$PATH:"/home/pierre/.micromamba/bin"
 
 # use pep582
 if [ -n "$PYTHONPATH" ]; then
@@ -51,7 +51,7 @@ fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # NPM stuff
@@ -90,17 +90,15 @@ doi2altmetric ()
     curl "https://api.altmetric.com/v1/doi/$1" 2> /dev/null | jq .details_url
 }
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/pierre/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/pierre/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/pierre/.micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    eval "$__mamba_setup"
 else
-    if [ -f "/home/pierre/.miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/pierre/.miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/pierre/.miniconda3/bin:$PATH"
-    fi
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
 fi
-unset __conda_setup
-# <<< conda initialize <<<
+unset __mamba_setup
+# <<< mamba initialize <<<
