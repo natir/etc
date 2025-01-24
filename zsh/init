@@ -39,9 +39,6 @@ PATH=$PATH:"/home/pierre/.local/bin/"
 # use rust bin
 source "/home/pierre/.cargo/env"
 
-# use micromamba bin
-PATH=$PATH:"/home/pierre/.micromamba/bin"
-
 # use pep582
 if [ -n "$PYTHONPATH" ]; then
     export PYTHONPATH='/home/pierre/.local/pipx/venvs/pdm/lib/python3.11/site-packages/pdm/pep582':$PYTHONPATH
@@ -54,6 +51,23 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# pixi
+export PATH="/home/pierre/.pixi/bin:$PATH"
+gpixi ()
+{
+  case $1 in
+    run)
+      pixi run --manifest-path $HOME/etc/pixi.toml ${@[@]:2}
+      ;;
+    add)
+      pixi add --manifest-path $HOME/etc/pixi.toml ${@[@]:2}
+      ;;
+    *)
+      echo "gpixi: $0 {run|add}"
+      ;;
+  esac
+}
+
 # NPM stuff
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
@@ -63,15 +77,9 @@ export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 [ -f "/home/pierre/.ghcup/env" ] && source "/home/pierre/.ghcup/env" # ghcup-env
 
 
-
 # Starship config
 TERM=xterm-256color
 eval "$(starship init zsh)"
-
-bad_network ()
-{
-	sudo systemctl stop dnssec-triggerd.service
-}
 
 # Doi to stuff
 doi2bib ()
@@ -89,16 +97,3 @@ doi2altmetric ()
 {
     curl "https://api.altmetric.com/v1/doi/$1" 2> /dev/null | jq .details_url
 }
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE='/home/pierre/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/pierre/.micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
