@@ -53,20 +53,6 @@ eval "$(pyenv init -)"
 
 # pixi
 export PATH="/home/pierre/.pixi/bin:$PATH"
-gpixi ()
-{
-  case $1 in
-    run)
-      pixi run --manifest-path $HOME/etc/pixi.toml ${@[@]:2}
-      ;;
-    add)
-      pixi add --manifest-path $HOME/etc/pixi.toml ${@[@]:2}
-      ;;
-    *)
-      echo "gpixi: $0 {run|add}"
-      ;;
-  esac
-}
 
 # NPM stuff
 NPM_PACKAGES="${HOME}/.npm-packages"
