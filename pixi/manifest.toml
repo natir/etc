@@ -1,0 +1,6 @@
+version = 1
+
+[envs.snakemake]
+channels = ["conda-forge", "bioconda"]
+dependencies = { snakemake = "*", seqtk = "*" }
+exposed = { snakemake = "snakemake", seqtk = "seqtk" }
