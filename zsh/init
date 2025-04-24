@@ -25,6 +25,7 @@ function upgrade
     sudo /usr/bin/dnf upgrade
     flatpak update -u
     rustup update
+    cargo install-update --all
 }
 
 
