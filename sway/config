@@ -31,8 +31,8 @@ include "~/.config/sway/local/output"
 # Example configuration:
 #
 exec swayidle -w \
-     timeout 600 'swaylock -f -c 000000' \
-     timeout 600 'swaymsg "output * dpms off"' \
+     timeout 120 'swaylock -f -c 000000' \
+     timeout 120 'swaymsg "output * dpms off"' \
      resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -f -c 000000'
 #
@@ -64,6 +64,9 @@ bindsym $mod+Shift+c kill
 
 # Start Your Launcher
 bindsym $mod+Space exec $menu
+
+# Lock screen
+bindsym $mod+l exec swaylock -f -c 000000
 
 # Drag Floating Windows By Holding Down $mod And Left Mouse Button.
 # Resize Them With Right Mouse Button + $mod.
