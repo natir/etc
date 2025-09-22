@@ -26,6 +26,7 @@ function upgrade
     flatpak update -u
     rustup update
     cargo install-update --all
+    pipx upgrade-all
 }
 
 
