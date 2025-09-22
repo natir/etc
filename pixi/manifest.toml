@@ -2,5 +2,15 @@ version = 1
 
 [envs.snakemake]
 channels = ["conda-forge", "bioconda"]
-dependencies = { snakemake = "*", seqtk = "*" }
-exposed = { snakemake = "snakemake", seqtk = "seqtk" }
+dependencies = { snakemake = "*" }
+exposed = { snakemake = "snakemake" }
+
+[envs.htslib]
+channels = ["conda-forge", "bioconda"]
+dependencies = { htslib = "*" }
+exposed = { annot-tsv = "annot-tsv", bgzip = "bgzip", htsfile = "htsfile", ref-cache = "ref-cache", tabix = "tabix" }
+
+[envs.bcftools]
+channels = ["conda-forge", "bioconda"]
+dependencies = { bcftools = "*" }
+exposed = { bcftools = "bcftools", color-chrs = "color-chrs", gff2gff = "gff2gff", guess-ploidy = "guess-ploidy", plot-roh = "plot-roh", plot-vcfstats = "plot-vcfstats", roh-viz = "roh-viz", run-roh = "run-roh", vcfutils = "vcfutils", vrfs-variances = "vrfs-variances" }
