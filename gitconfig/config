@@ -1,0 +1,7 @@
+[include]
+    path = ~/.config/git/user.inc
+    path = ~/.config/git/init.inc
+    path = ~/.config/git/filter.inc
+
+[includeIf "gitdir:~/doc/work/**"]
+    path = ~/doc/work/.gitconfig

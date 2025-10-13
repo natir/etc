@@ -1,4 +1,4 @@
-all: ${HOME}/.config/alacritty ${HOME}/.emacs.d/ ${HOME}/.config/environment.d/ ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.config/wofi/config ${HOME}/.zshrc ${HOME}/.pixi/manifests/pixi-global.toml
+all: ${HOME}/.config/alacritty ${HOME}/.emacs.d/ ${HOME}/.config/environment.d/ ${HOME}/.config/starship.toml ${HOME}/.config/sway/config ${HOME}/.config/waybar ${HOME}/.config/wofi/config ${HOME}/.zshrc ${HOME}/.pixi/manifests/pixi-global.toml ${HOME}/.config/git/
 
 
 ${HOME}/.config/alacritty: ${HOME}/etc/alacritty
@@ -42,6 +42,9 @@ ${HOME}/.config/wofi/config: ${HOME}/etc/wofi/config
 ${HOME}/.zshrc: ${HOME}/etc/zsh/init
 	ln -sf ${HOME}/etc/zsh/init ${HOME}/.zshrc
 
- ${HOME}/.pixi/manifests/pixi-global.toml: ${HOME}/etc/pixi/manifest.toml
+${HOME}/.pixi/manifests/pixi-global.toml: ${HOME}/etc/pixi/manifest.toml
 	mkdir -p ${HOME}/.pixi/manifests/
 	ln -sf ${HOME}/etc/pixi/manifest.toml ${HOME}/.pixi/manifests/pixi-global.toml
+
+${HOME}/.config/git/: ${HOME}/etc/gitconfig/
+	ln -sf ${HOME}/etc/gitconfig/ ${HOME}/.config/git
