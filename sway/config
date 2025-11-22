@@ -45,8 +45,9 @@ exec swayidle -w \
 # Example configuration:
 #
 input * {
-      xkb_layout "fr"
-      xkb_variant "bepo"
+      xkb_layout "fr,fr"
+      xkb_variant "bepo,ergol"
+      xkb_options "grp:alt_shift_toggle"
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs

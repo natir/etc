@@ -2,7 +2,11 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "pulseaudio", "temperature", "battery", "cpu", "memory", "idle_inhibitor", "clock"],
+    "modules-right": ["sway/language", "network", "pulseaudio", "temperature", "battery", "cpu", "memory", "idle_inhibitor", "clock"],
+
+    "sway/language": {
+        "format": "{short} {variant}"
+    },
 
     "network": {
 	"tooltip": false,
