@@ -14,3 +14,18 @@ exposed = { annot-tsv = "annot-tsv", bgzip = "bgzip", htsfile = "htsfile", ref-c
 channels = ["conda-forge", "bioconda"]
 dependencies = { bcftools = "*" }
 exposed = { bcftools = "bcftools", color-chrs = "color-chrs", gff2gff = "gff2gff", guess-ploidy = "guess-ploidy", plot-roh = "plot-roh", plot-vcfstats = "plot-vcfstats", roh-viz = "roh-viz", run-roh = "run-roh", vcfutils = "vcfutils", vrfs-variances = "vrfs-variances" }
+
+[envs.aardvark]
+channels = ["bioconda"]
+dependencies = { aardvark = "*" }
+exposed = { aardvark = "aardvark" }
+
+[envs.mosdepth]
+channels = ["bioconda"]
+dependencies = { mosdepth = "*" }
+exposed = { mosdepth = "mosdepth" }
+
+[envs.bedtools]
+channels = ["bioconda"]
+dependencies = { bedtools = "*" }
+exposed = { annotateBed = "annotateBed", bamToBed = "bamToBed", bamToFastq = "bamToFastq", bed12ToBed6 = "bed12ToBed6", bedToBam = "bedToBam", bedToIgv = "bedToIgv", bedpeToBam = "bedpeToBam", bedtools = "bedtools", closestBed = "closestBed", clusterBed = "clusterBed", complementBed = "complementBed", coverageBed = "coverageBed", expandCols = "expandCols", fastaFromBed = "fastaFromBed", flankBed = "flankBed", genomeCoverageBed = "genomeCoverageBed", getOverlap = "getOverlap", groupBy = "groupBy", intersectBed = "intersectBed", linksBed = "linksBed", mapBed = "mapBed", maskFastaFromBed = "maskFastaFromBed", mergeBed = "mergeBed", multiBamCov = "multiBamCov", multiIntersectBed = "multiIntersectBed", nucBed = "nucBed", pairToBed = "pairToBed", pairToPair = "pairToPair", randomBed = "randomBed", shuffleBed = "shuffleBed", slopBed = "slopBed", sortBed = "sortBed", subtractBed = "subtractBed", tagBam = "tagBam", unionBedGraphs = "unionBedGraphs", windowBed = "windowBed", windowMaker = "windowMaker" }
