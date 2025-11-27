@@ -119,6 +119,19 @@ bindsym $mod+plus Workspace 7
 bindsym $mod+minus Workspace 8
 bindsym $mod+slash Workspace 9
 bindsym $mod+asterisk Workspace 0
+
+# ergol setup
+bindsym $mod+1 Workspace 1
+bindsym $mod+2 Workspace 2
+bindsym $mod+3 Workspace 3
+bindsym $mod+4 Workspace 4
+bindsym $mod+5 Workspace 5
+bindsym $mod+6 Workspace 6
+bindsym $mod+7 Workspace 7
+bindsym $mod+8 Workspace 8
+bindsym $mod+9 Workspace 9
+bindsym $mod+0 Workspace 0
+
 # Move Focused Container To Workspace
 bindsym $mod+Shift+quotedbl Move Container To Workspace 1
 bindsym $mod+Shift+guillemotleft Move Container To Workspace 2
