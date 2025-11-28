@@ -25,6 +25,8 @@ set -gx EDITOR /usr/bin/vim
 # set path
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.pixi/bin
+fish_add_path $HOME/.pyenv/bin
+fish_add_path $HOME/.cargo/bin
 
 # load rust
 source $HOME/.cargo/env.fish
