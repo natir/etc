@@ -1,0 +1,12 @@
+AddKeysToAgent yes
+
+Host cantor
+    HostName pierre.marijon.fr
+    User pierre
+    Port 22
+
+Host enjolras
+     HostName enjolras
+     User pierre
+     Port 22
+     ProxyJump cantor

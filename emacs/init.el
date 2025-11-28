@@ -168,7 +168,11 @@
    [default default default italic underline success warning error])
  '(custom-enabled-themes '(wombat))
  '(package-selected-packages
-   '(yaml 0x0 company sass-mode default-text-scale lsp-ui rustic graphviz-dot-mode flycheck json-mode ess yaml-mode snakemake-mode python projectile use-package lsp-jedi yasnippet python-mode rust-mode company-lsp lsp-mode flymake-python-pyflakes flymake-rust)))
+   '(0x0 company company-lsp default-text-scale ess fish-mode flycheck
+	 flymake-python-pyflakes flymake-rust graphviz-dot-mode
+	 json-mode lsp-jedi lsp-mode lsp-ui projectile python
+	 python-mode rust-mode rustic sass-mode snakemake-mode
+	 use-package yaml yaml-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
