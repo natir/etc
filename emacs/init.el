@@ -172,7 +172,7 @@
 	 flymake-python-pyflakes flymake-rust graphviz-dot-mode
 	 json-mode lsp-jedi lsp-mode lsp-ui projectile python
 	 python-mode rust-mode rustic sass-mode snakemake-mode
-	 use-package yaml yaml-mode yasnippet)))
+	 use-package wdl-mode yaml yaml-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
