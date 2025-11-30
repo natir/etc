@@ -1,3 +1,5 @@
+# remove welcome message
+set -U fish_greeting ""
 
 # load ssh key
 fish_ssh_agent
