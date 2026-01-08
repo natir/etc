@@ -143,6 +143,20 @@ bindsym $mod+Shift+plus Move Container To Workspace 7
 bindsym $mod+Shift+minus Move Container To Workspace 8
 bindsym $mod+Shift+slash Move Container To Workspace 9
 bindsym $mod+Shift+asterisk Move Container To Workspace 0
+
+# ergol setup
+bindsym $mod+Shift+1 Move Container To Workspace 1
+bindsym $mod+Shift+2 Move Container To Workspace 2
+bindsym $mod+Shift+3 Move Container To Workspace 3
+bindsym $mod+Shift+4 Move Container To Workspace 4
+bindsym $mod+Shift+5 Move Container To Workspace 5
+bindsym $mod+Shift+6 Move Container To Workspace 6
+bindsym $mod+Shift+7 Move Container To Workspace 7
+bindsym $mod+Shift+8 Move Container To Workspace 8
+bindsym $mod+Shift+9 Move Container To Workspace 9
+bindsym $mod+Shift+0 Move Container To Workspace 0
+
+
 # Note: Workspaces Can Have Any Name You Want, Not Just Numbers.
 # We Just Use 1-10 As The Default.
 #
