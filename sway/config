@@ -45,9 +45,8 @@ exec swayidle -w \
 # Example configuration:
 #
 input * {
-      xkb_layout "fr,fr"
-      xkb_variant "bepo,ergol"
-      xkb_options "grp:alt_shift_toggle"
+      xkb_layout "fr"
+      xkb_variant "ergol"
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -109,18 +108,6 @@ bindsym $mod+Shift+Right Move Right
 # Workspaces:
 #
 # Switch To Workspace
-bindsym $mod+quotedbl Workspace 1
-bindsym $mod+guillemotleft Workspace 2
-bindsym $mod+guillemotright Workspace 3
-bindsym $mod+parenleft Workspace 4
-bindsym $mod+parenright Workspace 5
-bindsym $mod+at Workspace 6
-bindsym $mod+plus Workspace 7
-bindsym $mod+minus Workspace 8
-bindsym $mod+slash Workspace 9
-bindsym $mod+asterisk Workspace 0
-
-# ergol setup
 bindsym $mod+1 Workspace 1
 bindsym $mod+2 Workspace 2
 bindsym $mod+3 Workspace 3
@@ -133,18 +120,6 @@ bindsym $mod+9 Workspace 9
 bindsym $mod+0 Workspace 0
 
 # Move Focused Container To Workspace
-bindsym $mod+Shift+quotedbl Move Container To Workspace 1
-bindsym $mod+Shift+guillemotleft Move Container To Workspace 2
-bindsym $mod+Shift+guillemotright Move Container To Workspace 3
-bindsym $mod+Shift+parenleft Move Container To Workspace 4
-bindsym $mod+Shift+parenright Move Container To Workspace 5
-bindsym $mod+Shift+at Move Container To Workspace 6
-bindsym $mod+Shift+plus Move Container To Workspace 7
-bindsym $mod+Shift+minus Move Container To Workspace 8
-bindsym $mod+Shift+slash Move Container To Workspace 9
-bindsym $mod+Shift+asterisk Move Container To Workspace 0
-
-# ergol setup
 bindsym $mod+Shift+1 Move Container To Workspace 1
 bindsym $mod+Shift+2 Move Container To Workspace 2
 bindsym $mod+Shift+3 Move Container To Workspace 3
