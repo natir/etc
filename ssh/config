@@ -10,3 +10,13 @@ Host enjolras
      User pierre
      Port 22
      ProxyJump cantor
+
+Host b4g-login
+     HostName bio4g-login-seqoia.bioinfo.aphp.fr
+     User pmarijon
+     Port 22
+
+Host b4g-rseq
+     HostName bio4g-rseq-01
+     User jupyter
+     Port 22
