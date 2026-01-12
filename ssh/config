@@ -20,3 +20,4 @@ Host b4g-rseq
      HostName bio4g-rseq-01
      User jupyter
      Port 22
+     ProxyJump b4g-login
