@@ -3,6 +3,10 @@
     path = ~/.config/git/init.inc
     path = ~/.config/git/filter.inc
     path = ~/.config/git/pull.inc
+
+[includeIf "gitdir:~/dev/work/"]
+    path = ~/.config/git/user_work.inc
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
