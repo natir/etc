@@ -4,10 +4,6 @@
     "modules-center": [],
     "modules-right": ["sway/language", "network", "pulseaudio", "temperature", "battery", "cpu", "memory", "idle_inhibitor", "clock"],
 
-    "sway/language": {
-        "format": "{short} {variant}"
-    },
-
     "network": {
 	"tooltip": false,
 	"format-wifi": " {essid} {ipaddr}",
