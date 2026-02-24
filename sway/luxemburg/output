@@ -1,4 +1,5 @@
 output * bg #000000 solid_color
 
-output DP-5 pos 0 0 res 1920x1200
-output eDP-1 pos 1920 0 res 1920x1080
+output eDP-1 pos 0 0 res 1920x1080
+output DP-5 pos 1920 0 res 1920x1200
+output DP-4 pos 3840 0 res 1680x1050
