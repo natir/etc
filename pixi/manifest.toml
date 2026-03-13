@@ -2,7 +2,7 @@ version = 1
 
 [envs.snakemake]
 channels = ["conda-forge", "bioconda"]
-dependencies = { snakemake = "*" }
+dependencies = { snakemake = "*", polars = "*", pandas = "*", pyarrow = "*", altair = "*" }
 exposed = { snakemake = "snakemake" }
 
 [envs.htslib]
