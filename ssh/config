@@ -15,9 +15,32 @@ Host b4g-login
      HostName bio4g-login-seqoia.bioinfo.aphp.fr
      User pmarijon
      Port 22
+     SetEnv TERM=xterm
 
-Host b4g-rseq
+Host b4g-rseq-01
      HostName bio4g-rseq-01
      User jupyter
      Port 22
      ProxyJump b4g-login
+     SetEnv TERM=xterm
+
+Host b4g-rseq-02
+     HostName bio4g-rseq-02
+     User jupyter
+     Port 22
+     ProxyJump b4g-login
+     SetEnv TERM=xterm
+
+Host b4g-rseq-03
+     HostName bio4g-rseq-03
+     User jupyter
+     Port 22
+     ProxyJump b4g-login
+     SetEnv TERM=xterm
+
+Host b4g-29
+     HostName bio4g-calc-29
+     User pmarijon
+     Port 22
+     ProxyJump b4g-login
+     SetEnv TERM=xterm
